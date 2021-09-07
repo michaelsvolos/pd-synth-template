@@ -1,0 +1,106 @@
+#N canvas 443 23 572 732 12;
+#X floatatom 15 70 5 0 0 0 - - -, f 5;
+#X floatatom 59 71 5 0 0 0 - - -, f 5;
+#X obj 23 41 notein;
+#X obj 15 97 pack 0 0;
+#X obj 16 153 pack 0 0 0;
+#X obj 17 179 route 1 2 3 4 5 6;
+#X obj 12 207 s voice-note-1;
+#X obj 13 231 s voice-note-2;
+#X obj 13 254 s voice-note-3;
+#X obj 120 207 s voice-note-4;
+#X obj 121 231 s voice-note-5;
+#X obj 122 254 s voice-note-6;
+#X obj 237 207 voice 1;
+#X obj 297 207 voice 2;
+#X obj 357 207 voice 3;
+#X obj 237 233 voice 4;
+#X obj 297 232 voice 5;
+#X obj 358 232 voice 6;
+#X obj 236 119 dac~;
+#X obj 30 319 vsl 15 128 1.5 6000 1 0 amp-a empty A 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X text 47 282 Amp;
+#X floatatom 13 467 5 0 0 0 - - -, f 5;
+#X obj 72 318 vsl 15 128 1 6000 1 0 amp-d empty D 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X floatatom 55 466 5 0 0 0 - - -, f 5;
+#X obj 115 320 vsl 15 128 0 100 0 0 amp-s empty S 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X floatatom 98 466 5 0 0 0 - - -, f 5;
+#X obj 158 320 vsl 15 128 1 6000 1 0 amp-r empty R 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X floatatom 140 468 5 0 0 0 - - -, f 5;
+#X obj 196 320 vsl 15 128 0 1 0 0 amp-vel-snd empty Vel._amt 0 -9 0
+10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 183 467 5 0 0 0 - - -, f 5;
+#X obj 255 304 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 19 502 Power;
+#X obj 15 532 vsl 15 128 1.5 6000 1 0 pwr-a empty A 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 57 532 vsl 15 128 1 6000 1 0 pwr-d empty D 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 102 532 vsl 15 128 0 100 0 0 pwr-s empty S 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 149 533 vsl 15 128 1 6000 1 0 pwr-r empty R 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 196 532 vsl 15 128 0 1 0 0 pwr-vel empty Vel._amt 0 -9 0 10
+#fcfcfc #000000 #000000 0 1;
+#X floatatom 4 673 5 0 0 0 - - -, f 5;
+#X floatatom 48 674 5 0 0 0 - - -, f 5;
+#X floatatom 91 673 5 0 0 0 - - -, f 5;
+#X floatatom 136 674 5 0 0 0 - - -, f 5;
+#X floatatom 185 675 5 0 0 0 - - -, f 5;
+#X obj 249 533 vsl 15 128 -2.5 2.5 0 0 pwr-env-amt pwr-env-amt-rcv
+Env._amt 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 238 676 5 0 0 0 - - -, f 5;
+#X msg 281 590 0;
+#X obj 279 627 s pwr-env-amt-rcv;
+#X obj 16 125 poly 6 1;
+#X obj 237 68 catch~ outs1;
+#X obj 329 68 catch~ outs2;
+#X obj 236 93 *~ 1;
+#X obj 329 91 *~ 1;
+#X obj 436 27 vsl 15 128 0 1 0 1 empty empty Volume 0 -9 0 10 #fcfcfc
+#000000 #000000 8200 1;
+#X floatatom 423 169 5 0 0 0 - - -, f 5;
+#X connect 0 0 3 0;
+#X connect 1 0 3 1;
+#X connect 2 0 0 0;
+#X connect 2 1 1 0;
+#X connect 3 0 46 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 5 2 8 0;
+#X connect 5 3 9 0;
+#X connect 5 4 10 0;
+#X connect 5 5 11 0;
+#X connect 19 0 21 0;
+#X connect 22 0 23 0;
+#X connect 24 0 25 0;
+#X connect 26 0 27 0;
+#X connect 28 0 29 0;
+#X connect 30 0 19 0;
+#X connect 30 0 22 0;
+#X connect 30 0 24 0;
+#X connect 30 0 26 0;
+#X connect 30 0 28 0;
+#X connect 32 0 37 0;
+#X connect 33 0 38 0;
+#X connect 34 0 39 0;
+#X connect 35 0 40 0;
+#X connect 36 0 41 0;
+#X connect 42 0 43 0;
+#X connect 44 0 45 0;
+#X connect 46 0 4 0;
+#X connect 46 1 4 1;
+#X connect 46 2 4 2;
+#X connect 47 0 49 0;
+#X connect 48 0 50 0;
+#X connect 49 0 18 0;
+#X connect 50 0 18 1;
+#X connect 51 0 52 0;
+#X connect 51 0 50 1;
+#X connect 51 0 49 1;
